@@ -1,0 +1,115 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0..."/> 
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
+<style> 
+body { 
+ margin: 0 auto; 
+} 
+
+#header { 
+background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/7/44/9d77e999c0fc9aa124c7732fde5d8447.jpg); 
+background-position: center; 
+height: 200 px;
+
+} 
+
+div { 
+padding: 5px; box-sizing: border-box; 
+} 
+
+#left-panel { 
+float: left; 
+height: 500px; 
+width: 15%; 
+background-color: red; 
+} 
+
+#content { 
+float:left; 
+width:85%; 
+background: lime; 
+} 
+
+#top-menu { 
+height: 50px; 
+background: pink; 
+} 
+
+.fixed { 
+position: fixed; 
+top: 0; 
+width: 100%; 
+} 
+
+.content { 
+float: left; 
+height: 25%; 
+width: 300px; 
+background: lime; 
+} 
+
+.content img {width: 100%;} 
+
+@media(max-width: 768px) { 
+#left-panel { 
+display: none; 
+} 
+#content { 
+margin-left: 0 !important; 
+} 
+} 
+</style> 
+
+</head> 
+<body> 
+<header id="header"> main menu
+<div id="top-menu">topmenu</div> 
+ </header>
+
+<div id="left-panel">panel </div> 
+
+<div id="content"> 
+<div class="content"><img src="http://www.bugaga.ru/uploads/posts/2012-09/1348839438_cat_02.jpg"/></div> 
+<div class="content"><img src="http://files8.adme.ru/files/news/part_50/501755/29055-R3L8T8D-650-tumblr_mn3vikMrj91ri87b4o1_1280.jpg"/></div> 
+<div class="content"><img src="https://i.ytimg.com/vi/A7akF9mr19A/maxresdefault.jpg"/></div> 
+<div class="content"><img src="http://s4.stc.all.kpcdn.net/f/12/image/15/02/7740215.jpg"/></div> 
+<div class="content"><img src="http://files4.adme.ru/files/news/part_50/501755/28855-R3L8T8D-650-CkqiZRA.jpg"/></div> 
+<div class="content"><img src="http://ru3.anyfad.com/items/t1@b1cf20ff-42a4-438d-93fa-ed5a0f9fdfe7/Samaya-grustnaya-koshka.jpg"/></div> 
+<div class="content"><img src="http://nashi-koshi.ru/wp-content/uploads/2012/10/ser-kot8-k.jpg"/></div> 
+<div class="content"><img src="https://pp.vk.me/c411529/v411529127/506e/-3lnmGJmfPo.jpg"/></div>
+  
+<div class="content"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSnDPYSCbNwVaKzV1ezJwt4uEtnYIBITL3AwIhBFUQazpZyKvBq"/></div> 
+<div class="content"><img src="http://cs.pikabu.ru/images/previews_comm/2013-05_4/13687337312158.jpg"/></div> 
+<div class="content"><img src="https://pp.vk.me/c313721/v313721803/5f11/SSTemX5EzlI.jpg"/></div> 
+<div class="content"><img src="http://www.bugaga.ru/uploads/posts/2012-09/1348839438_cat_02.jpg"/></div> 
+<div class="content"><img src="http://files8.adme.ru/files/news/part_50/501755/29055-R3L8T8D-650-tumblr_mn3vikMrj91ri87b4o1_1280.jpg"/></div> 
+<div class="content"><img src="https://i.ytimg.com/vi/A7akF9mr19A/maxresdefault.jpg"/></div> 
+<div class="content"><img src="http://s4.stc.all.kpcdn.net/f/12/image/15/02/7740215.jpg"/></div> 
+<div class="content"><img src="http://img1.joyreactor.cc/pics/comment/cat-%D0%BA%D0%BE%D1%82-%D1%82%D0%B0%D1%80%D0%B4-%D0%B4%D0%B5%D0%BD%D1%8C-%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-405209.jpeg"/></div> 
+
+</div> 
+
+<script> 
+document.addEventListener("scroll", function () { 
+
+if (window.pageYOffset > 200) { 
+document.getElementById("top-menu").classList.add('fixed'); 
+} else { 
+document.getElementById("top-menu").classList.remove('fixed'); 
+} 
+
+var heightForContentExpansion = document.getElementById ('header').offsetHeight + document.getElementById ('left-panel').offsetHeight; 
+if (window.pageYOffset > heightForContentExpansion) { 
+document.getElementById("left-panel").style.display="none"; 
+document.getElementById("content").style.width="100%"; 
+} else { 
+document.getElementById("left-panel").style.display="block"; 
+document.getElementById("content").style.width="85%"; 
+} 
+}); 
+</script> 
+</body> 
+</html>
